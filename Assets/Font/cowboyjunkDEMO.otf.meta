@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d12ef8b9170b14740b0074dadb59fac8
+guid: 8566df1a76ee3f249805a46c9fed7041
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - HandyWesternSerif
+  - Cowboy Junk DEMO
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
