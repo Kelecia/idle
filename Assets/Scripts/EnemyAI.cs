@@ -12,6 +12,8 @@ public class Enemy_AI : MonoBehaviour
     public int maxHealth = 3;
     private int currentHealth;
 
+    public int value = 1;
+
 
  
     void Start()
@@ -45,6 +47,7 @@ public class Enemy_AI : MonoBehaviour
     {
         //  any death logic here,  death animations, giving rewards, etc.
         Destroy(gameObject);
+        CoinCounter.instance.IncreaseCoins(value);
     }
 
    

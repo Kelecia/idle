@@ -101,6 +101,7 @@ MonoBehaviour:
   player: {fileID: 8561305219126068782, guid: 30141fa5f536dd74c99224097ee126f5, type: 3}
   speed: 1
   maxHealth: 6
+  value: 1
 --- !u!61 &5955663243039644220
 BoxCollider2D:
   m_ObjectHideFlags: 0
