@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4446615220530128914}
   - component: {fileID: 7539355092552697038}
-  - component: {fileID: 3381321805923297107}
   m_Layer: 0
   m_Name: Player_Cactus
   m_TagString: Untagged
@@ -117,18 +116,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3381321805923297107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8561305219126068782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b2dca9574574048ad5eaad86bc029a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 3106278746681350836, guid: 7a8ad38c4e22d4d4d93846a92f6ac7a4, type: 3}
-  bulletPos: {fileID: 7810140276335917484}
-  enemy: {fileID: 774062395792037812, guid: 0d1f4e4bb0c485c4781d9f272f5ec784, type: 3}
