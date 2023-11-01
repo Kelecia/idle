@@ -8,11 +8,14 @@ public class BulletScript : MonoBehaviour
    private Rigidbody2D rb;
 
    public float force;
+    private float timer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-      //enemy = GameObject.FindGameObjectWithTag("Enemy");
+        //enemy = GameObject.FindGameObjectWithTag("Enemy");
+
+        //transform.position = Vector2.MoveTowards(this.transform.position, enemy.transform.position, force * Time.deltaTime);
 
         //set direction & velocity for bullet
         Vector3 direction = enemy.transform.position - transform.position;
@@ -25,6 +28,19 @@ public class BulletScript : MonoBehaviour
  
     void Update()
     {
-        
+        timer += Time.deltaTime;
+        if(timer>10)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            //other.gameObject.GetComponent<EnemyAI>().currentHealth -= 10;
+            Destroy(gameObject);
+        }
     }
 }
