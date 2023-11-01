@@ -8,6 +8,8 @@ public class UpgradeWeopon : MonoBehaviour
     public int upgradeCost = 2;
     public int damageIncrease = 3;
 
+    public GameObject cacti;
+
     public void OnButtonClick()
     {
         if (CoinCounter.instance.currentCoins >= upgradeCost)
@@ -21,6 +23,15 @@ public class UpgradeWeopon : MonoBehaviour
         }
     }
 
+    private void UpgradeGun()
+    {
+        Shoot shootScript = cacti.GetComponent<Shoot>();
+        if (shootScript != null)
+        {
+            shootScript.isUpgraded = true; // Set the gun as upgraded
+            Debug.Log("upgraded");
+        }
+    }
     private void DamageIncrease()
     {
         //call the take damage function in enemyAI script
@@ -30,5 +41,6 @@ public class UpgradeWeopon : MonoBehaviour
             enemyAI.IncreaseDamage();
         }
     }
+
 }
 

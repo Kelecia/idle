@@ -13,11 +13,7 @@ public class BulletScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //enemy = GameObject.FindGameObjectWithTag("Enemy");
 
-        //transform.position = Vector2.MoveTowards(this.transform.position, enemy.transform.position, force * Time.deltaTime);
-
-        //set direction & velocity for bullet
         Vector3 direction = enemy.transform.position - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
@@ -39,7 +35,7 @@ public class BulletScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            //other.gameObject.GetComponent<EnemyAI>().currentHealth -= 10;
+            
             Destroy(gameObject);
         }
     }

@@ -106,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -189850594, guid: 6657852215c582640b6d2df7202d749d, type: 3}
+  m_Sprite: {fileID: 252006520, guid: 6657852215c582640b6d2df7202d749d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,5 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3106278746681350836, guid: 7a8ad38c4e22d4d4d93846a92f6ac7a4, type: 3}
+  redBullet: {fileID: 3955084903779124371, guid: 8ef5bc8ed3bfb41429af1e2883fc4f08, type: 3}
   bulletPos: {fileID: 7810140276335917484}
   enemy: {fileID: 774062395792037812, guid: 0d1f4e4bb0c485c4781d9f272f5ec784, type: 3}
+  isUpgraded: 0
