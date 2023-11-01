@@ -1049,8 +1049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d4db2375aaa7e4e8d3b575f38f95f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3477468216007368730, guid: 6b0edb00f17d8034cbc0e24c080f0f10, type: 3}
-  enemyInterval: 4
+  enemyPrefab: {fileID: 774062395792037812, guid: 0d1f4e4bb0c485c4781d9f272f5ec784, type: 3}
+  enemyInterval: 5
 --- !u!4 &516022291
 Transform:
   m_ObjectHideFlags: 0
@@ -1060,7 +1060,7 @@ Transform:
   m_GameObject: {fileID: 516022289}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.26, y: -3.4, z: 0}
+  m_LocalPosition: {x: 5.26, y: -4.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2226,6 +2226,14 @@ PrefabInstance:
     - target: {fileID: 4446615220530128914, guid: 30141fa5f536dd74c99224097ee126f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810140276335917484, guid: 30141fa5f536dd74c99224097ee126f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.082
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810140276335917484, guid: 30141fa5f536dd74c99224097ee126f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 8561305219126068782, guid: 30141fa5f536dd74c99224097ee126f5, type: 3}
       propertyPath: m_Name

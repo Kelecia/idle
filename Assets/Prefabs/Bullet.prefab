@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ec383d9f72bb6428d2d0c24a1f98b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 3477468216007368730, guid: 6b0edb00f17d8034cbc0e24c080f0f10, type: 3}
+  enemy: {fileID: 774062395792037812, guid: 0d1f4e4bb0c485c4781d9f272f5ec784, type: 3}
   force: 7

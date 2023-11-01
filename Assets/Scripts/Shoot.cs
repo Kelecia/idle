@@ -8,6 +8,7 @@ public class Shoot : MonoBehaviour
     public Transform bulletPos;
 
     private float timer;
+    public GameObject enemy;
 
     void Start()
     {
@@ -17,17 +18,25 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
+        //if out of range wont shoot
+        float distance = Vector2.Distance(transform.position, enemy.transform.position);
+        Debug.Log("Distance");
 
-        if(timer > 1)
+        if(distance < 6)
         {
-            timer = 0;
-            shoot();
+            timer += Time.deltaTime;
+
+            if (timer > 1)
+            {
+                timer = 0;
+                shoot();
+            }
         }
     }
 
     void shoot()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        Debug.Log("Shooting");
     }
 }
