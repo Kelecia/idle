@@ -28,10 +28,6 @@ public class CowSpawner : MonoBehaviour
     {
         if (spawnPoints.Length > 0)
         {
-            //int randomIndex = Random.Range(0, spawnPoints.Length); // Choose a random spawn point
-            //Vector3 spawnPosition = spawnPoints[randomIndex].position;
-            //Instantiate(cowPrefab, spawnPosition, Quaternion.identity);
-
             List<Transform> availableSpawnPoints = new List<Transform>(spawnPoints);
 
             // Remove used spawn points from the available spawn points list
@@ -57,11 +53,4 @@ public class CowSpawner : MonoBehaviour
         }
         
     }
-
-    /*private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-       Gizmos.DrawWireSphere(this.transform.position, Radius);
-    }*/
-
 }

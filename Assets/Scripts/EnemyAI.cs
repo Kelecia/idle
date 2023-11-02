@@ -43,7 +43,7 @@ public class Enemy_AI : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet"))
         {
             //other.gameObject.GetComponent<EnemyAI>().currentHealth -= 10;
-            TakeDamage(3);
+            TakeDamage(1);
         }
     }
 

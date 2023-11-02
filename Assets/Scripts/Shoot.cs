@@ -33,16 +33,6 @@ public class Shoot : MonoBehaviour
             {
                 timer = 0;
                 shoot();
-                /*if(isUpgraded)
-                {
-                   strongBullet();
-                   Debug.Log("new bullet");
-                }
-                else
-                {
-                    shoot();
-                }*/
-
             }
         }
     }
@@ -53,10 +43,5 @@ public class Shoot : MonoBehaviour
         Debug.Log("Shooting");
     }
 
-    void strongBullet()
-    {
-        //Instantiate(redBullet, bulletPos.position, Quaternion.identity);
-        Debug.Log("Shooting strogner bu;llet");
-    }
-    
+
 }
