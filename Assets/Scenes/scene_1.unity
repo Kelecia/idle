@@ -1546,6 +1546,7 @@ MonoBehaviour:
   - {fileID: 1626179380}
   - {fileID: 1833496379}
   - {fileID: 688305572}
+  usedSpawnPoints: []
 --- !u!1 &886615834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,6 +1932,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106951415}
   m_CullTransparentMesh: 1
+--- !u!1 &1171455912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1171455914}
+  - component: {fileID: 1171455913}
+  m_Layer: 0
+  m_Name: upgradesvript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1171455913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171455912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea21070f9152bc4c8b1d0e80bef3d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowSpawner: {fileID: 850753927}
+  upgradeCost: 2
+  upgradedPrefab: {fileID: 5787444863067970710, guid: ce267bef10fae2e45ae3104bc273d0fc, type: 3}
+  playerTag: Player
+--- !u!4 &1171455914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171455912}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.50938386, y: -2.2937372, z: -0.037963092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1196177430
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,7 +2558,6 @@ GameObject:
   - component: {fileID: 1518461135}
   - component: {fileID: 1518461134}
   - component: {fileID: 1518461133}
-  - component: {fileID: 1518461136}
   m_Layer: 5
   m_Name: Upgrade
   m_TagString: Untagged
@@ -2582,7 +2630,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1518461136}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpgradeWeopon, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
@@ -2644,22 +2692,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518461131}
   m_CullTransparentMesh: 1
---- !u!114 &1518461136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518461131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ce68d6a987573945934a5b5826e0290, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 774062395792037812, guid: 0d1f4e4bb0c485c4781d9f272f5ec784, type: 3}
-  upgradeCost: 2
-  damageIncrease: 3
-  cacti: {fileID: 8561305219126068782, guid: 30141fa5f536dd74c99224097ee126f5, type: 3}
 --- !u!1 &1626179379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3093,3 +3125,4 @@ SceneRoots:
   - {fileID: 850753926}
   - {fileID: 1497601658}
   - {fileID: 559496548}
+  - {fileID: 1171455914}
