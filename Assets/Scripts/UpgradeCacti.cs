@@ -5,14 +5,18 @@ using UnityEngine;
 public class UpgradeCacti : MonoBehaviour
 {
     public CowSpawner cowSpawner;
-
+    public int upgradeCost = 2;
     public GameObject upgradedPrefab;
+    private List<Transform> usedUpgradeSpawnPoints = new List<Transform>(); // List of used spawn points for upgraded objects
+
+    public string playerTag = "Player";
+
 
     public void OnButtonClick()
     {
-        if (CoinCounter.instance.currentCoins >= cowCost)
+        if (CoinCounter.instance.currentCoins >= upgradeCost)
         {
-            CoinCounter.instance.IncreaseCoins(-cowCost); // Deduct the cost from the player's coins
+            CoinCounter.instance.IncreaseCoins(-upgradeCost); // Deduct the cost from the player's coins
             ReplaceCowsWithUpgradedObject();
         }
         else
@@ -24,13 +28,15 @@ public class UpgradeCacti : MonoBehaviour
 
     private void ReplaceCowsWithUpgradedObject()
     {
-        if (spawnPoints.Length > 0)
+        GameObject[] players = GameObject.FindGameObjectsWithTag(Player);
+        if (cowSpawner.spawnPoints.Length > 0)
         {
-            // Here, you can destroy the existing cows spawned by the CowSpawner script
-            foreach (Transform usedSpawnPoint in cowSpawner.usedSpawnPoints)
+            // Destroy the existing cows
+            foreach (GameObject player in players)
             {
-                Destroy(usedSpawnPoint.gameObject);
+                Destroy(player);
             }
+
 
             // Now, you can instantiate your upgraded game object in place of the cows
             // Ensure that upgraded objects do not spawn at the same location as other upgraded objects
@@ -45,7 +51,7 @@ public class UpgradeCacti : MonoBehaviour
                 }
 
             }
-
+        }
     }
 }
 

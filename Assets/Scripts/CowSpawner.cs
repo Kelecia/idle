@@ -8,7 +8,8 @@ public class CowSpawner : MonoBehaviour
     public int cowCost = 1;
 
     public Transform[] spawnPoints; // Array of spawn points
-    private List<Transform> usedSpawnPoints = new List<Transform>(); // List of used spawn points
+    public List<Transform> usedSpawnPoints = new List<Transform>(); // List of used spawn points
+    //protected List<Transform> UsedSpawnPoints { get; } = new List<Transform>();
 
     public void OnButtonClick()
     {
