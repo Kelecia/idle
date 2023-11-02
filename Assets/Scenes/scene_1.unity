@@ -2630,8 +2630,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UpgradeWeopon, Assembly-CSharp
+      - m_Target: {fileID: 1171455913}
+        m_TargetAssemblyTypeName: UpgradeCacti, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
