@@ -6,8 +6,9 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public float enemyInterval = 3.5f;
+    public Transform[] spawnPoints; 
 
-    void Start()
+    /*void Start()
     {
         StartCoroutine(SpawnEnemies());
     }
@@ -17,7 +18,25 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(enemyInterval);
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            int randomIndex = Random.Range(0, spawnPoints.Length); 
+            Vector3 spawnPosition = spawnPoints[randomIndex].position;
+            
+        }
+    }*/
+    void Start()
+    {
+        StartCoroutine(SpawnEnemies());
+    }
+
+    private IEnumerator SpawnEnemies()
+    {
+        while (true)
+        {
+            int randomIndex = Random.Range(0, spawnPoints.Length);
+            Vector3 spawnPosition = spawnPoints[randomIndex].position;
+            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            yield return new WaitForSeconds(enemyInterval);
         }
     }
 }

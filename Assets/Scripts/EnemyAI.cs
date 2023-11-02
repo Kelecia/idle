@@ -15,7 +15,6 @@ public class Enemy_AI : MonoBehaviour
     public int value = 1;
 
 
- 
     void Start()
     {
         currentHealth = maxHealth; 
@@ -24,6 +23,7 @@ public class Enemy_AI : MonoBehaviour
  
     void Update()
     {
+        //moving
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
     }
 
@@ -35,6 +35,21 @@ public class Enemy_AI : MonoBehaviour
         {
             Die();
         }
+
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            //other.gameObject.GetComponent<EnemyAI>().currentHealth -= 10;
+            TakeDamage(1);
+        }
+    }
+
+    public void IncreaseDamage()
+    {
+       TakeDamage(6);
     }
 
     void OnMouseDown()
@@ -42,6 +57,7 @@ public class Enemy_AI : MonoBehaviour
         // Handle the mouse click on the enemy
         TakeDamage(1); // adjust the damage
     }
+
 
     void Die()
     {
