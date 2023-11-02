@@ -1823,7 +1823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cowSpawner: {fileID: 850753927}
   upgradeCost: 2
-  upgradedPrefab: {fileID: 5787444863067970710, guid: ce267bef10fae2e45ae3104bc273d0fc, type: 3}
+  upgradedPrefab: {fileID: 4229459861175252978, guid: 6188f8ea12a791f4ebc865532af6b719, type: 3}
   playerTag: Player
 --- !u!4 &1171455914
 Transform:

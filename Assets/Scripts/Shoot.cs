@@ -5,13 +5,12 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     public GameObject bullet;
-    public GameObject redBullet;
     public Transform bulletPos;
 
     private float timer;
     public GameObject enemy;
 
-    public bool isUpgraded = false; // Track if the gun is upgraded
+    //public bool isUpgraded = false; // Track if the gun is upgraded
 
     void Start()
     {

@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 774062395792037812, guid: 0d1f4e4bb0c485c4781d9f272f5ec784, type: 3}
-  force: 5
+  force: 4
 --- !u!61 &8861097645484418962
 BoxCollider2D:
   m_ObjectHideFlags: 0
