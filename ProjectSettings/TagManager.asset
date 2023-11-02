@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Bullet
   - StrongBullet
+  - UpgradedPlayer
   layers:
   - Default
   - TransparentFX

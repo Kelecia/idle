@@ -44,10 +44,16 @@ public class UpgradeCacti : MonoBehaviour
         if (spawnPoint != null)
         {
             Vector3 spawnPosition = spawnPoint.position;
-            // Instantiate your upgraded game object here
-            Instantiate(upgradedPrefab, spawnPosition, Quaternion.identity);
-            usedUpgradeSpawnPoints.Add(spawnPoint); // Mark the spawn point as used for upgraded objects
 
+            // Delay before replacing the player
+            yield return new WaitForSeconds(0.1f);
+
+            // Instantiate upgraded game object 
+            Instantiate(upgradedPrefab, spawnPosition, Quaternion.identity);
+            usedUpgradeSpawnPoints.Add(spawnPoint); // Mark the spawn point used for upgraded objects
+
+            // Delay before destroying the player
+            yield return new WaitForSeconds(0.1f);
             Destroy(playerToUpgrade); // Destroy the existing player
 
             currentIndex++;
