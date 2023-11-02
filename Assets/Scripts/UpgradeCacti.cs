@@ -4,50 +4,50 @@ using UnityEngine;
 
 public class UpgradeCacti : MonoBehaviour
 {
+    public CowSpawner cowSpawner;
+
+    public GameObject upgradedPrefab;
+
     public void OnButtonClick()
     {
         if (CoinCounter.instance.currentCoins >= cowCost)
         {
             CoinCounter.instance.IncreaseCoins(-cowCost); // Deduct the cost from the player's coins
-            SpawnCow();
+            ReplaceCowsWithUpgradedObject();
         }
         else
         {
-            Debug.Log("Not enough coins to spawn a cowboy");
+            Debug.Log("Not enough coins to upgrade");
         }
     }
 
 
-    private void SpawnCow()
+    private void ReplaceCowsWithUpgradedObject()
     {
         if (spawnPoints.Length > 0)
         {
-            List<Transform> availableSpawnPoints = new List<Transform>(spawnPoints);
-
-            // Remove used spawn points from the available spawn points list
-            foreach (Transform usedSpawnPoint in usedSpawnPoints)
+            // Here, you can destroy the existing cows spawned by the CowSpawner script
+            foreach (Transform usedSpawnPoint in cowSpawner.usedSpawnPoints)
             {
-                availableSpawnPoints.Remove(usedSpawnPoint);
+                Destroy(usedSpawnPoint.gameObject);
             }
 
-            if (availableSpawnPoints.Count > 0)
+            // Now, you can instantiate your upgraded game object in place of the cows
+            // Ensure that upgraded objects do not spawn at the same location as other upgraded objects
+            foreach (Transform usedSpawnPoint in cowSpawner.usedSpawnPoints)
             {
-                int randomIndex = Random.Range(0, availableSpawnPoints.Count); // Choose a random spawn point
-                Transform spawnPoint = availableSpawnPoints[randomIndex];
-                usedSpawnPoints.Add(spawnPoint); // Mark the spawn point as used
-                Vector3 spawnPosition = spawnPoint.position;
-                Instantiate(cowPrefab, spawnPosition, Quaternion.identity);
-            }
-            else
-            {
-                Debug.Log("No available");
-            }
+                if (!usedUpgradeSpawnPoints.Contains(usedSpawnPoint))
+                {
+                    Vector3 spawnPosition = usedSpawnPoint.position;
+                    // Instantiate your upgraded game object here
+                    Instantiate(upgradedPrefab, spawnPosition, Quaternion.identity);
+                    usedUpgradeSpawnPoints.Add(usedSpawnPoint); // Mark the spawn point as used for upgraded objects
+                }
 
-
-        }
+            }
 
     }
 }
 
 
-}
+
