@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 774062395792037812, guid: 0d1f4e4bb0c485c4781d9f272f5ec784, type: 3}
-  force: 7
+  force: 8
 --- !u!50 &4447170414877830121
 Rigidbody2D:
   serializedVersion: 4

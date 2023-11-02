@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 4446615220530128914}
   - component: {fileID: 7539355092552697038}
   - component: {fileID: 7901385556826638170}
+  - component: {fileID: 293757059876054363}
   m_Layer: 0
   m_Name: Player_Cactus
   m_TagString: Player
@@ -130,7 +131,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3106278746681350836, guid: 7a8ad38c4e22d4d4d93846a92f6ac7a4, type: 3}
-  redBullet: {fileID: 3955084903779124371, guid: 8ef5bc8ed3bfb41429af1e2883fc4f08, type: 3}
   bulletPos: {fileID: 7810140276335917484}
   enemy: {fileID: 774062395792037812, guid: 0d1f4e4bb0c485c4781d9f272f5ec784, type: 3}
-  isUpgraded: 0
+--- !u!61 &293757059876054363
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8561305219126068782}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.07019618, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.29, y: 0.28}
+    newSize: {x: 0.25, y: 0.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.099400796, y: 0.28}
+  m_EdgeRadius: 0

@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CowSpawner : MonoBehaviour
 {
+    public EnemySpawner enemySpawner;
     public GameObject cowPrefab;
     public int cowCost = 1;
 
     public Transform[] spawnPoints; // Array of spawn points
     public List<Transform> usedSpawnPoints = new List<Transform>(); // List of used spawn points
-    //protected List<Transform> UsedSpawnPoints { get; } = new List<Transform>();
+    
 
     public void OnButtonClick()
     {
@@ -17,6 +18,7 @@ public class CowSpawner : MonoBehaviour
         {
             CoinCounter.instance.IncreaseCoins(-cowCost); // Deduct the cost from the player's coins
             SpawnCow();
+            ReduceEnemySpawnInterval();
         }
         else
         {
@@ -24,6 +26,11 @@ public class CowSpawner : MonoBehaviour
         }
     }
 
+    private void ReduceEnemySpawnInterval()
+    {
+        // Call the AdjustEnemyInterval method in the EnemySpawner
+        enemySpawner.AdjustEnemyInterval(1f); // Adjust to your desired interval
+    }
 
     private void SpawnCow()
     {

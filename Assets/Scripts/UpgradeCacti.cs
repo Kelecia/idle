@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UpgradeCacti : MonoBehaviour
 {
+    public EnemySpawner enemySpawner;
     public CowSpawner cowSpawner;
     public int upgradeCost = 2;
     public GameObject upgradedPrefab;
@@ -24,6 +25,7 @@ public class UpgradeCacti : MonoBehaviour
             if (playersToUpgrade.Length > 0)
             {
                 StartCoroutine(UpgradeNextPlayer());
+                ReduceEnemySpawnInterval(); // Reduce the enemy spawning interval
             }
             else
             {
@@ -34,6 +36,12 @@ public class UpgradeCacti : MonoBehaviour
         {
             Debug.Log("Not enough coins to upgrade");
         }
+    }
+
+    private void ReduceEnemySpawnInterval()
+    {
+        // Call the AdjustEnemyInterval method in the EnemySpawner
+        enemySpawner.AdjustEnemyInterval(0.8f); // Adjust to your desired interval
     }
 
     private IEnumerator UpgradeNextPlayer()

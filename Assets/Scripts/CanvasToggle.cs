@@ -5,7 +5,9 @@ using TMPro;
 
 public class CanvasToggle : MonoBehaviour
 {
-    public int emotionalSuportCost = 0;
+    public EnemySpawner enemySpawner;
+
+    public int emotionalSuportCost = 1;
     public GameObject canvasObject; // Reference to the Canvas GameObject to toggle.
     public TMP_Text textComponent; // Reference to the TextMeshPro Text component.
 
@@ -20,11 +22,18 @@ public class CanvasToggle : MonoBehaviour
         {
             CoinCounter.instance.IncreaseCoins(-emotionalSuportCost); // Deduct the cost from the player's coins
             ToggleCanvas();
+            ReduceEnemySpawnInterval();
         }
         else
         {
             Debug.Log("Not enough for emotional support");
         }
+    }
+
+    private void ReduceEnemySpawnInterval()
+    {
+        // Call the AdjustEnemyInterval method in the EnemySpawner
+        enemySpawner.AdjustEnemyInterval(3f); // Adjust to your desired interval
     }
 
     public void ToggleCanvas()

@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 6977700215542751462}
   - component: {fileID: 4824975910956522893}
   - component: {fileID: 4094186458742812552}
+  - component: {fileID: 8375791833273173302}
   m_Layer: 0
   m_Name: Cactus Side Sheet_19
   m_TagString: UpgradedPlayer
@@ -180,3 +181,48 @@ MonoBehaviour:
   bullet: {fileID: 3955084903779124371, guid: 8ef5bc8ed3bfb41429af1e2883fc4f08, type: 3}
   bulletPos: {fileID: 5641211824137257514}
   enemy: {fileID: 774062395792037812, guid: 0d1f4e4bb0c485c4781d9f272f5ec784, type: 3}
+--- !u!61 &8375791833273173302
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4229459861175252978}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.104588956, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.26, y: 0.28}
+    newSize: {x: 0.26, y: 0.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05082208, y: 0.28}
+  m_EdgeRadius: 0
