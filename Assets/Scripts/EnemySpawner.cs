@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public float enemyInterval = 3.5f;
-    public Transform[] spawnPoints;
+    public Transform[] spawnPoints; 
 
     /*void Start()
     {

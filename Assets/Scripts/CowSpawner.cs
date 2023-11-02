@@ -7,8 +7,6 @@ public class CowSpawner : MonoBehaviour
     public GameObject cowPrefab;
     public int cowCost = 1;
 
-    //public float Radius = 1;
-
     public Transform[] spawnPoints; // Array of spawn points
     private List<Transform> usedSpawnPoints = new List<Transform>(); // List of used spawn points
 
@@ -57,9 +55,7 @@ public class CowSpawner : MonoBehaviour
 
 
         }
-        //Instantiate(cowPrefab, transform.position, Quaternion.identity); // Spawn the cow prefab
-        //Vector3 randomPos = Random.insideUnitCircle * Radius;
-        //Instantiate(cowPrefab, randomPos, Quaternion.identity);
+        
     }
 
     /*private void OnDrawGizmos()
