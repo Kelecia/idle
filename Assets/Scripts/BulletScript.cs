@@ -35,8 +35,8 @@ public class BulletScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            
-            Destroy(gameObject);
+            Debug.Log("hitenemy");
+           // Destroy(gameObject);
         }
     }
 }

@@ -23,7 +23,7 @@ public class Shoot : MonoBehaviour
     {
         //if out of range wont shoot
         float distance = Vector2.Distance(transform.position, enemy.transform.position);
-        Debug.Log("Distance");
+       
 
         if(distance < 8)
         {
@@ -32,15 +32,16 @@ public class Shoot : MonoBehaviour
             if (timer > 1)
             {
                 timer = 0;
-                if(isUpgraded)
+                shoot();
+                /*if(isUpgraded)
                 {
-                    strongBullet();
+                   strongBullet();
                    Debug.Log("new bullet");
                 }
                 else
                 {
                     shoot();
-                }
+                }*/
 
             }
         }
@@ -54,7 +55,7 @@ public class Shoot : MonoBehaviour
 
     void strongBullet()
     {
-        Instantiate(redBullet, bulletPos.position, Quaternion.identity);
+        //Instantiate(redBullet, bulletPos.position, Quaternion.identity);
         Debug.Log("Shooting strogner bu;llet");
     }
     
