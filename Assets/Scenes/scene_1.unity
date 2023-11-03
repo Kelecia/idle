@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpawner: {fileID: 1497601659}
   cowSpawner: {fileID: 850753927}
-  upgradeCost: 10
+  upgradeCost: 8
   upgradedPrefab: {fileID: 4229459861175252978, guid: 6188f8ea12a791f4ebc865532af6b719, type: 3}
   playerTag: Player
 --- !u!4 &1171455914
@@ -2910,7 +2910,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Upgrade Cacti = 10 c
+  m_text: Upgrade Cacti = 7 c
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bcbde3e16936bab4986245c715d08d27, type: 2}
   m_sharedMaterial: {fileID: -504282007853904547, guid: bcbde3e16936bab4986245c715d08d27, type: 2}
