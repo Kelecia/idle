@@ -41,7 +41,7 @@ public class UpgradeCacti : MonoBehaviour
     private void ReduceEnemySpawnInterval()
     {
         // Call the AdjustEnemyInterval method in the EnemySpawner
-        enemySpawner.AdjustEnemyInterval(0.8f); // Adjust to your desired interval
+        enemySpawner.AdjustEnemyInterval(1f); // Adjust to your desired interval
     }
 
     private IEnumerator UpgradeNextPlayer()

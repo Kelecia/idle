@@ -131,8 +131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 420557607568056171, guid: 38f76a27b6738e44d8bae0eb0cee5968, type: 3}
-  speed: 2
-  maxHealth: 6
+  speed: 1
+  maxHealth: 5
   value: 1
 --- !u!1001 &7084414280264454368
 PrefabInstance:
@@ -188,7 +188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7967422027782467284, guid: 6b0edb00f17d8034cbc0e24c080f0f10, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7967422027782467284, guid: 6b0edb00f17d8034cbc0e24c080f0f10, type: 3}
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

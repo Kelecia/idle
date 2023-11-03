@@ -29,7 +29,7 @@ public class CowSpawner : MonoBehaviour
     private void ReduceEnemySpawnInterval()
     {
         // Call the AdjustEnemyInterval method in the EnemySpawner
-        enemySpawner.AdjustEnemyInterval(1f); // Adjust to your desired interval
+        enemySpawner.AdjustEnemyInterval(2f); // Adjust to your desired interval
     }
 
     private void SpawnCow()
